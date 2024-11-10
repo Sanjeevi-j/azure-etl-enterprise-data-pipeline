@@ -244,7 +244,7 @@
 			"properties": {
 				"activities": [
 					{
-						"name": "Copy address",
+						"name": "Copy address_1",
 						"type": "Copy",
 						"dependsOn": [],
 						"policy": {
