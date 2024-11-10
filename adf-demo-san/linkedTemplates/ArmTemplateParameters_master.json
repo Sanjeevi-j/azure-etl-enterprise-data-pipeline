@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-demo-san"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://sanjdemosa123.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"value": "https://sanjdemosa123.dfs.core.windows.net/"
+		},
+		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+			"value": "1108-105637-fpoa3kae"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://KV-DEV-SANJEEVI.vault.azure.net/"
+		},
+		"onpremSqlServer_properties_typeProperties_server": {
+			"value": "DESKTOP-QKQK0OM\\SQLEXPRESS"
+		},
+		"onpremSqlServer_properties_typeProperties_database": {
+			"value": "AdventureWorksLT2017"
+		},
+		"onpremSqlServer_properties_typeProperties_userName": {
+			"value": "mrk"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
