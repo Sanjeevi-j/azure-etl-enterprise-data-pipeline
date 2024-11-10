@@ -11,6 +11,9 @@
 		"AzureDataLakeStorage2_accountKey": {
 			"value": ""
 		},
+		"synw-sanj-demo-WorkspaceDefaultSqlServer_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:synw-sanj-demo.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://sanjdemosa123.dfs.core.windows.net/"
 		},
@@ -31,6 +34,15 @@
 		},
 		"onpremSqlServer_properties_typeProperties_userName": {
 			"value": "mrk"
+		},
+		"serverlessSQLdb_properties_typeProperties_server": {
+			"value": "synw-sanj-demo-ondemand.sql.azuresynapse.net"
+		},
+		"serverlessSQLdb_properties_typeProperties_database": {
+			"value": "gold_db"
+		},
+		"synw-sanj-demo-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://sanjdemosa123.dfs.core.windows.net"
 		}
 	}
 }

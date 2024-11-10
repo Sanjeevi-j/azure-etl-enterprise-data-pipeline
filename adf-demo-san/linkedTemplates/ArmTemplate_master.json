@@ -15,6 +15,11 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage2'"
 		},
+		"synw-sanj-demo-WorkspaceDefaultSqlServer_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'synw-sanj-demo-WorkspaceDefaultSqlServer'",
+			"defaultValue": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:synw-sanj-demo.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://sanjdemosa123.dfs.core.windows.net/"
@@ -42,6 +47,18 @@
 		"onpremSqlServer_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "mrk"
+		},
+		"serverlessSQLdb_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "synw-sanj-demo-ondemand.sql.azuresynapse.net"
+		},
+		"serverlessSQLdb_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "gold_db"
+		},
+		"synw-sanj-demo-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://sanjdemosa123.dfs.core.windows.net"
 		},
 		"containerUri": {
 			"type": "string",
@@ -76,6 +93,9 @@
 					"AzureDataLakeStorage2_accountKey": {
 						"value": "[parameters('AzureDataLakeStorage2_accountKey')]"
 					},
+					"synw-sanj-demo-WorkspaceDefaultSqlServer_connectionString": {
+						"value": "[parameters('synw-sanj-demo-WorkspaceDefaultSqlServer_connectionString')]"
+					},
 					"AzureDataLakeStorage1_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
 					},
@@ -96,10 +116,39 @@
 					},
 					"onpremSqlServer_properties_typeProperties_userName": {
 						"value": "[parameters('onpremSqlServer_properties_typeProperties_userName')]"
+					},
+					"serverlessSQLdb_properties_typeProperties_server": {
+						"value": "[parameters('serverlessSQLdb_properties_typeProperties_server')]"
+					},
+					"serverlessSQLdb_properties_typeProperties_database": {
+						"value": "[parameters('serverlessSQLdb_properties_typeProperties_database')]"
+					},
+					"synw-sanj-demo-WorkspaceDefaultStorage_properties_typeProperties_url": {
+						"value": "[parameters('synw-sanj-demo-WorkspaceDefaultStorage_properties_typeProperties_url')]"
 					}
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "adf-demo-san_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adf-demo-san_ArmTemplate_0')]"
+			]
 		}
 	]
 }
