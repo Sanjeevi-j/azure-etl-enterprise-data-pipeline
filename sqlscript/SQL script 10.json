@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 10",
+	"properties": {
+		"content": {
+			"query": "SELECT TOP (100) [customer_id]\n,[name_style]\n,[title]\n,[first_name]\n,[middle_name]\n,[last_name]\n,[password_salt]\n,[rowguid]\n,[modified_date]\n,[suffix]\n,[company_name]\n,[sales_person]\n,[email_address]\n,[phone]\n,[password_hash]\n FROM [dbo].[Customer]",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "gold_db",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

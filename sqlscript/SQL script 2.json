@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 2",
+	"properties": {
+		"content": {
+			"query": "SELECT TOP (100) [address_id]\n,[address_line1]\n,[address_line2]\n,[city]\n,[state_province]\n,[country_region]\n,[postal_code]\n,[rowguid]\n,[modified_date]\n FROM [dbo].[address]",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "gold_db",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
