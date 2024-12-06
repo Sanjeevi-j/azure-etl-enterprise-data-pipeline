@@ -73,6 +73,14 @@ This project automates the entire data engineering workflow, transforming raw da
 
 ---
 
+## Power BI Dashboard
+
+This section showcases the interactive **Power BI Dashboard** built to visualize key metrics and insights from the transformed data. The dashboard allows stakeholders to interact with the data and gain valuable business insights.
+
+<img src="https://github.com/user-attachments/assets/cd75948a-e25a-41e4-a373-ec3d6d67ee56" alt="Power BI Dashboard" width="900"/>
+
+---
+
 ## Conclusion  
 
 This project demonstrates the power of leveraging Azure’s cloud services to design a scalable, efficient, and automated data pipeline. The **Medallion Architecture** ensures data quality, governance, and usability throughout the pipeline. By using **Azure Data Factory**, **Azure Databricks**, and other Azure tools in synergy, the solution provides an end-to-end framework for modern data engineering practices.
