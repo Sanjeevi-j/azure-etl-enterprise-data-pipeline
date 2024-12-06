@@ -1,44 +1,17 @@
 # Azure ETL & Data Engineering Project: Enterprise Data Pipeline Architecture
 
-🚀 **Happy to Share My Azure ETL & Data Engineering Project!** 🚀
-
-This project demonstrates the development of a fully automated data pipeline using **Microsoft Azure**, leveraging the **Medallion Architecture** to transform raw data into valuable insights. The solution is designed to handle large-scale data processing while ensuring data quality, governance, and scalability. 
-
----
-
-## 📖 Introduction
+## Introduction
 
 The goal of this project was to design and implement a comprehensive data engineering solution that automates the process of ingesting, transforming, and visualizing data. The pipeline is built using Azure services such as **Azure Data Factory**, **Azure Databricks**, and **Azure Data Lake Storage**, with a focus on scalability, automation, and data governance. By leveraging the **Medallion Architecture** (Bronze, Silver, Gold layers), we can ensure a structured flow of data from raw ingestion to insights.
 
 ---
+## Architecture
 
-## 💡 Key Insights
-
-- **End-to-End Pipeline Mastery**: Showcased skills across the complete data lifecycle, from ingestion to visualization.
-- **Data Quality and Governance**: Ensured consistency and accuracy with structured transformation processes.
-- **Scalable Automation**: Utilized Azure Data Factory to create an efficient, automated workflow for data processing at scale.
+![Architecture](https://github.com/user-attachments/assets/6ef66aa6-942c-48fa-b7b5-f2b94013fc39)
 
 ---
 
-## 🔑 Project Highlights
-
-- **Data Ingestion**: Set up a pipeline to pull data from on-prem SQL databases using Azure Data Factory.
-- **Medallion Architecture**: Implemented data flow through **Bronze**, **Silver**, and **Gold** layers in **Azure Data Lake**, with transformations handled by **Azure Databricks**.
-- **Data Transformation**: Applied **PySpark** in **Azure Databricks** for scalable transformations, producing analytics-ready datasets.
-
----
-
-## 🔧 Technologies
-
-- **Azure Data Factory**: Orchestration and automation of data pipelines.
-- **Azure Databricks**: Efficient data transformation with scalable processing.
-- **Azure Data Lake Storage Gen2**: Scalable and secure data storage.
-- **Azure Synapse Analytics**: For big data and analytics processing.
-- **Power BI**: For visualization and reporting.
-
----
-
-## 🛠 Architecture Overview
+## Architecture Overview
 
 The architecture follows the **Medallion Architecture** pattern and is designed to handle large-scale data processing tasks in a structured and efficient manner.
 
@@ -48,26 +21,34 @@ The architecture follows the **Medallion Architecture** pattern and is designed 
 
 ---
 
-## 📊 Architecture
+## Technologies
 
-![Architecture](https://github.com/user-attachments/assets/6ef66aa6-942c-48fa-b7b5-f2b94013fc39)
-
----
-
-## ⚙️ Features
-
-- **Automated Data Pipeline**: Uses Azure Data Factory for orchestrating data movement and transformations.
-- **Scalable and Modular Design**: The system can scale as more data is ingested, ensuring future-proofing.
-- **Data Governance**: Implemented to ensure data quality, lineage, and transparency.
+- **Azure Data Factory**: Orchestration and automation of data pipelines.
+- **Azure Databricks**: Efficient data transformation with scalable processing.
+- **Azure Data Lake Storage Gen2**: Scalable and secure data storage.
+- **Azure Synapse Analytics**: For big data and analytics processing.
+- **Power BI**: For visualization and reporting.
 
 ---
 
-## 📌 Conclusion
+## Dataset Used
+ The **AdventureWorksLT2017** database is a sample relational database provided by Microsoft, commonly used for demonstrating SQL Server capabilities. In this project, it serves as the source data for the ETL pipeline, hosted on an on-premises Microsoft SQL Server.
+- Database link: [AdventureWorksLT2017](https://tinyurl.com/AdventureWorksLT2017)
 
-This project highlights the power of **Microsoft Azure** in building a robust, automated, and scalable **ETL pipeline** for modern data engineering tasks. By leveraging tools like **Azure Data Factory**, **Databricks**, and **Power BI**, I've demonstrated how to build a data pipeline that ensures data governance, quality, and scalability. 
+## Data Model
+![Data Model](https://github.com/user-attachments/assets/294cf674-4577-428d-b97f-31d71364a743)
 
-The Medallion Architecture not only streamlines the transformation process but also ensures that data flows seamlessly through **Bronze**, **Silver**, and **Gold** layers, making it ready for high-level analytics. This architecture is ideal for businesses that require end-to-end data processing with high levels of automation and scalability.
 
-With the ability to automate large-scale data workflows, this project demonstrates essential skills for any data engineering role and offers a practical solution for transforming raw data into actionable insights.
+## Scripts for Project
 
----
+1. Storage Mount    - [storagemount.py](storagemount.py)  
+2. Bronze to Silver - [bronzetosilver.py](bronzetosilver.py)  
+3. Silver to Gold   - [silvertogold.py](silvertogold.py)
+
+
+
+
+
+
+
+
